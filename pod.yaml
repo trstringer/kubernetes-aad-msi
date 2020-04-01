@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aadtest1
+  labels:
+    aadpodidbinding: sqlaad
+spec:
+  containers:
+    - name: aadtest1
+      image: trstringer/k8saadmsi:latest
+      imagePullPolicy: Always
+      env:
+        - name: SERVER_NAME
+          value: myserver.database.windows.net
+        - name: DATABASE_NAME
+          value: testdb
