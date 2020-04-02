@@ -99,8 +99,8 @@ EXEC sp_addrolemember 'db_owner', 'k8scluster';
 ```sql
 CREATE TABLE messagelist
 (
-	id INT IDENTITY(1, 1),
-	message_text NVARCHAR(128) 
+    id INT IDENTITY(1, 1),
+    message_text NVARCHAR(128) 
 );
 
 INSERT INTO messagelist
